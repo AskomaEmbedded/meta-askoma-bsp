@@ -1,0 +1,11 @@
+[Unit]
+Description=Askoma Manager Image Installer
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/askoma-manager-installer
+
+[Install]
+WantedBy=multi-user.target

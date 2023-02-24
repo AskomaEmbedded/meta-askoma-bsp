@@ -1,0 +1,34 @@
+#!/bin/sh
+# -*- shell-script -*-
+
+info() {
+    echo "INFO: $@"
+}
+
+error() {
+    echo "ERROR: $@"
+    echo none > /sys/class/leds/expled8/trigger
+    echo 0 > /sys/class/leds/expled8/brightness
+    exit 1
+}
+
+UBOOT="/installer-data/flash.bin"
+ROOTFS="/installer-data/rootfs.wic.xz"
+
+echo timer > /sys/class/leds/expled8/trigger
+
+info "Programming U-Boot in SPI NOR"
+
+flash_erase -q /dev/mtd0 0 0 || error "Failed to erase /dev/mtd0"
+flash_erase -q /dev/mtd1 0 0 || error "Failed to erase /dev/mtd1"
+flash_erase -q /dev/mtd2 0 0 || error "Failed to erase /dev/mtd2"
+dd if=$UBOOT of=/dev/mtd0 bs=1k seek=1 || error "Failed to flash.bin"
+
+info "Programming rootfs image"
+bmaptool copy $ROOTFS /dev/mmcblk0
+
+echo none > /sys/class/leds/expled8/trigger
+echo 255 > /sys/class/leds/expled8/brightness
+
+info "Installation SUCCESS: stopping"
+sync
