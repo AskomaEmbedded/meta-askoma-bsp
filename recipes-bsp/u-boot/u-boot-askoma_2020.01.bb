@@ -8,7 +8,7 @@ require recipes-bsp/u-boot/u-boot.inc
 SUMMARY = "U-Boot for Askoma based boards"
 DEPENDS += "bison-native bc-native dtc-native lzop-native"
 
-LICENSE = "GPL-2.0-or-later"
+LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://Licenses/README;md5=30503fd321432fc713238f582193b78e"
 
 SRC_URI = "git://github.com/AskomaEmbedded/u-boot.git;protocol=https;branch=${SRCBRANCH} \

@@ -2,7 +2,7 @@ require recipes-kernel/linux/linux-fslc.inc
 
 SUMMARY = "Linux kernel for Energy Manager 1.3"
 
-LICENSE = "GPL-2.0-only"
+LICENSE = "GPL-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
 DEPENDS += "lzop-native"

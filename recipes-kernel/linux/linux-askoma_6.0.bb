@@ -2,7 +2,7 @@ require recipes-kernel/linux/linux-fslc.inc
 
 SUMMARY = "Linux kernel for Energy Manager 2.0"
 
-LICENSE = "GPL-2.0-only"
+LICENSE = "GPL-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 
 KBUILD_DEFCONFIG = "energy_manager_defconfig"
