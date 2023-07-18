@@ -1,5 +1,5 @@
 load ${devtype} ${devnum}:${distro_bootpart} ${loadaddr} /boot/fitImage
-imxtract ${loadaddr} fdt-imx6ull-kontron-n6411-s.dtb ${fdt_addr_r}
+imxtract ${loadaddr} fdt-imx6ull-em-rev${board_rev}.dtb ${fdt_addr_r}
 imxtract ${loadaddr} kernel-1 ${kernel_addr_r}
 
 if test ${devtype} = ubi; then

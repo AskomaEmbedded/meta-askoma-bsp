@@ -14,7 +14,7 @@ LIC_FILES_CHKSUM = "file://Licenses/README;md5=30503fd321432fc713238f582193b78e"
 SRC_URI = "git://github.com/AskomaEmbedded/u-boot.git;protocol=https;branch=${SRCBRANCH} \
            file://fw_env.config \
 "
-SRCREV = "a81ba943d8d3901984c38fc49506ad1d3eb06461"
+SRCREV = "8511ea48c229a2d6c47aefda6394508d06840a89"
 SRCBRANCH = "2020.01+askoma"
 
 PROVIDES += "u-boot"
