@@ -12,7 +12,7 @@ KBUILD_DEFCONFIG = "askoma_defconfig"
 SRCBRANCH = "5.4.x+askoma"
 SRC_URI = "git://github.com/AskomaEmbedded/linux.git;branch=${SRCBRANCH};protocol=https"
 
-SRCREV = "d0155c0e0f56a6ef8c4f1b5855f812043cb16005"
+SRCREV = "cd3a95f329f86002b57539acad19f606f7454e97"
 
 LINUX_VERSION = "5.4.105"
 LOCALVERSION = "-askoma"
